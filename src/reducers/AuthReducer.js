@@ -7,15 +7,15 @@ import {
 } from '../actions/Types';
 
 const INITIAL_STATE = {
-    email: "",
-    password: "",
+    email: '',
+    password: '',
     user: null,
-    error: "",
+    error: '',
     loading: false
-}
+};
 
 export default (state = INITIAL_STATE, action) => {
-
+    console.log(action);
     switch (action.type) {
         case EMAIL_CHANGED:
             return {
@@ -34,11 +34,12 @@ export default (state = INITIAL_STATE, action) => {
                 error: ""
             }
         case LOGIN_USER_SUCCESS:
+        console.log("logged");
             return {
                 ...state,
                 ...INITIAL_STATE,
-                user: action.payload                
-            }
+                user: action.payload
+            };
         case LOGIN_USER_FAIL:
             return {
                 ...state,
