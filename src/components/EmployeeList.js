@@ -1,19 +1,14 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { Card, CardSection } from './common'
 
-class Empregados extends Component {
+class EmployeeList extends Component {
     render() {
         return (
-            <View>
-                <text>Lista de Empregados</text>
-                <text>Lista de Empregados</text>
-                <text>Lista de Empregados</text>
-                <text>Lista de Empregados</text>
-                <text>Lista de Empregados</text>
-                <text>Lista de Empregados</text>
-            </View>
+            <Card>
+              <CardSection></CardSection>
+            </Card>
         );
     }
 }
 
-export default Empregados;
+export default EmployeeList;
